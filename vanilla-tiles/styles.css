@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Lato, sans-serif
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto
+}
+
+@media (min-width:768px) {
+    .container {
+        width: 750px
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        width: 970px
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: 1170px
+    }
+}
+
+.tiles-open {
+    overflow: hidden!important
+}
+
+.parent-tiles *,
+.parent-tiles :after,
+.parent-tiles :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.parent-tiles {
+    clear: both;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    text-align: center
+}
+
+.child-tiles {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    margin: 15px;
+    padding: 15px;
+    width: 250px;
+    height: 250px;
+    color: #333;
+    background: #f8f5ed;
+    font-size: 14px;
+    line-height: 22px;
+    cursor: pointer;
+    text-align: left;
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .3);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .3)
+}
+
+.child-tiles .tiles-inner h3 {
+    display: block;
+    clear: both;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 20px
+}
+
+.child-tiles .tiles-inner p {
+    display: block;
+    clear: both;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0
+}
+
+.child-tiles .tiles-inner-big {
+    opacity: 0
+}
+
+.child-tiles.child-tiles-big .tiles-inner-big {
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 4% 8%;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    -webkit-box-shadow: none;
+    overflow-y: auto;
+    cursor: initial;
+    color: #333;
+    background: #f8f5ed;
+    font-size: 14px;
+    line-height: 22px;
+    -webkit-transition: opacity 2s ease;
+    -moz-transition: opacity .5s ease;
+    -ms-transition: opacity .5s ease;
+    -o-transition: opacity .5s ease;
+    transition: opacity .5s ease;
+    -webkit-transition: all .1s ease-in-out
+}
+
+.child-tiles .ctb-close {
+    opacity: 0
+}
+
+.child-tiles.child-tiles-big .ctb-close {
+    opacity: .5;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    z-index: 11;
+    cursor: pointer;
+    -webkit-transition: opacity 2s ease;
+    -moz-transition: opacity .5s ease;
+    -ms-transition: opacity .5s ease;
+    -o-transition: opacity .5s ease;
+    transition: opacity .5s ease;
+    -webkit-transition: all .1s ease-in-out
+}
+
+.child-tiles.child-tiles-big .ctb-close:after {
+    opacity: .5;
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    z-index: 11;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    content: "\00d7";
+    font-weight: 300;
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    line-height: 20px;
+    font-size: 20px;
+    text-align: center;
+    color: #fff
+}
+
+.child-tiles.child-tiles-big .ctb-close:hover:after {
+    opacity: 1;
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .3);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .3)
+}
